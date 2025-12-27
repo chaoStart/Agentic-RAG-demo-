@@ -29,18 +29,18 @@ _ = vector_store.add_documents(documents=all_splits)
 # 方式2 milvus存储向量数据
 from langchain_milvus import Milvus
 
-vector_store = Milvus(
-    embedding_function=embeddings,
-    connection_args={
-        "host": "localhost",
-        "port": "19530",
-    },
-    index_params={
-        "index_type": "FLAT",
-        "metric_type": "L2"
-    }
-)
-_ = vector_store.add_documents(documents=all_splits)
+# vector_store = Milvus(
+#     embedding_function=embeddings,
+#     connection_args={
+#         "host": "localhost",
+#         "port": "19530",
+#     },
+#     index_params={
+#         "index_type": "FLAT",
+#         "metric_type": "L2"
+#     }
+# )
+# _ = vector_store.add_documents(documents=all_splits)
 
 # Construct a tool for retrieving context
 @tool(response_format="content_and_artifact")

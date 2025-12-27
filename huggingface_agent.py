@@ -2,8 +2,8 @@ import os
 import datasets
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.docstore.document  import Document
-from  retriever_tool import RetrieverTool
+from langchain_community.docstore.document import Document
+from retriever_tool import RetrieverTool
 from dotenv import load_dotenv
 
 # 加载 .env 文件中的环境变量
